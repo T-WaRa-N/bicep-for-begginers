@@ -1,4 +1,5 @@
 az account show --output table                                    # check current subscription
+az account show --output json
 az acount list --output table                                     # to get the list of default subscritions in the az acount
 az account set --subscription <subcription-id>                    # set a particular subscription
 az account list --all                                             # list all subscriptions
@@ -12,10 +13,22 @@ az group delete --name exampleGroup
 az storage account create --resource-group exampleGroup --name examplestore --location westus --sku Standard_LRS --kind StorageV2
 az account list-locations --output table                           # to fetch location 
 az configure --defaults location=<location>                        # configure location
+az configure --list-defaults                                       # to check the default location
 az configure --defaults group="<resource-group-name>"
 az deployment group create --resource-group exampleGroup --template-file storage.bicep
 az lock create --name LockGroup --lock-type CanNotDelete --resource-group exampleGroup
 az lock delete --name exampleLock --resource-group exampleGroup
 
 
+steps to check when you want to deploy iac in azure
+1. check the active subscription
+2. check location or rgion
+3. check the resource group
+4. be ware of the naming convention
 
+
+templateFile="azuredeploy.json"
+today=$(date +"%d-%b-%Y")
+DeploymentName="addstorage-"$today
+
+az deployment group create --name $DeploymentName --template-file $templateFile

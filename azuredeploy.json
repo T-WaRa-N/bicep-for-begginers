@@ -8,9 +8,9 @@
     {
         "type": "Microsoft.Storage/storageAccounts",
         "apiVersion": "2025-01-01",
-        "name": "twaranlatestorage123",
+        "name": "twaranfixstoragearm",
         "tags": { 
-            "displayName": "twaranlatestorage123" 
+            "displayName": "twaranfixstoragearm" 
         },
         "location": "[resourceGroup().location]",
         "kind": "StorageV2",
