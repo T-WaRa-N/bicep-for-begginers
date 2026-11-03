@@ -6,6 +6,7 @@
   "variables": {},
   "resources": [
     {
+<<<<<<< Updated upstream
         "type": "Microsoft.Storage/storageAccounts",
         "apiVersion": "2025-01-01",
         "name": "twaranlatestorage123",
@@ -17,6 +18,19 @@
         "sku": { 
             "name": "Standard_LRS" 
         }
+=======
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2025-01-01",
+      "name": "twaranfixstoragearm",
+      "tags": { 
+        "displayName": "twaranfixstoragearm" 
+      },
+      "location": "[resourceGroup().location]",
+      "kind": "StorageV2",
+      "sku": { 
+        "name": "Standard_LRS" 
+      }
+>>>>>>> Stashed changes
     }
   ],
   "outputs": {}

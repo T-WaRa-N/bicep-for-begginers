@@ -18,4 +18,18 @@ az lock create --name LockGroup --lock-type CanNotDelete --resource-group exampl
 az lock delete --name exampleLock --resource-group exampleGroup
 
 
+<<<<<<< Updated upstream
 
+=======
+steps to check when you want to deploy iac in azure
+1. check the active subscription
+2. check location or rgion
+3. check the resource group
+4. beware of the naming convention
+
+templateFile="azuredeploy.json"
+today=$(date +"%d-%b-%Y")
+DeploymentName="addstorage-"$today
+
+az deployment group create --name $DeploymentName --template-file $templateFile
+>>>>>>> Stashed changes
